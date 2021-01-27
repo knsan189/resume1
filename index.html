@@ -33,7 +33,7 @@
             <h1>Resume</h1>
             <div class="intro">
                 <div class="row">
-                    <p>Home / Resume</p>
+                    <p><span>Home</span> / Resume</p>
 
                     <a href="#about"><i class="fas fa-chevron-down animate__bounce"></i></a>
                 </div>
@@ -73,30 +73,36 @@
             </article>
             <article id="skill">
                     <div class="row">
-                        <h2>Design Skill</h2>
+                        <h2 class="title">Design Skill</h2>
                         <div class="html">
-                            <div class="score">
-                                <div class="myscore"></div>
-                            </div>
                             <p>HTML/CSS</p>
+                            <div class="score">
+                                <div class="myscore">
+                                <span><p>90%</p></span></div>
+                            </div>
+
                         </div>
                         <div class="JavaScript">
-                            <div class="score">
-                                <div class="myscore"></div>
-                            </div>
                             <p>JavaScript</p>
+                            <div class="score">
+                                <div class="myscore">
+                                    <span><p>70%</p></span></div>
+                            </div>
+
                         </div>
                         <div class="Jquery">
-                            <div class="score">
-                                <div class="myscore"></div>
-                            </div>
                             <p>Jquery</p>
+                            <div class="score">
+                                <div class="myscore"><span><p>80%</p></span></div>
+                            </div>
+
                         </div>
                         <div class="React">
-                            <div class="score">
-                                <div class="myscore"></div>
-                            </div>
                             <p>React</p>
+                            <div class="score">
+                                <div class="myscore"><span><p>70%</p></span></div>
+                            </div>
+
                         </div>
                     </div>
             </article>
@@ -104,11 +110,18 @@
         </section>
 
         <footer id="footer">
-            <p>
-                E : knsan189@naver.com</p>
-            <p>
-                T : 010-9013-4206</p>
+            <div class="num">
+                <p>E : knsan189@naver.com</p>
+                <p>T : 010-9013-4206</p>
+            </div>
+            <div class="sns">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-github"></i>
+            </div>
         </footer>
+
+
         <div class="lines">
             <div class="row">
                 <div class="line-col"></div>
@@ -117,7 +130,9 @@
                 <div class="line-col"></div>
                 <div class="line-col"></div>
             </div>
-            <script> </script>
+            <script>
+                $(".lines").addTemporaryClass("ready", 1000);
+            </script>
         </div>
 
     </div>
