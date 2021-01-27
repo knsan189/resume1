@@ -1,34 +1,64 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 *{border:none; margin:0; padding:0; box-sizing: border-box; font-family: 'Roboto', sans-serif; background: transparent;}
-body{ color:#111}
-#wrap{position: relative;}
-#header{position: fixed; top:0; width:100%;}
+body{ color:#111; }
+p{font-size: 16px; line-height: 1.5;}
+h2{font-size: 24px;}
+#wrap{position: relative; background: #f4f4f4;}
+#header{position: fixed; top:0; width:100%; z-index: 99;}
 #header #hd{position: relative; padding:0 10px; margin-top:50px}
 #header h1{display:inline-block; padding-left:40px;}
 #header h1 a{font-size: 20px; font-weight: bolder;}
+#header h1 span{color:#666}
 #nav{position: absolute; top:0; right:2%;}
 #nav .depth1 li{float:left; font-size: 16px; font-weight: bold; padding:0 30px;}
+.row{margin:0 auto; width:900px;}
+.home{position: relative;height:100vh; z-index: 12;}
+.home h1{position: absolute; top:45%; transform: translate(-50%,-50%); left:50%; font-size: 140px; font-weight: bolder; display: inline-block; }
+.home .intro{position: absolute; bottom:3%;  transform: translate(-50%,-50%); left:50%; font-weight: bold;}
+.home .intro p{display: inline-block; padding-left:30px}
+.home .intro i{position:absolute; font-size: 30px; animation: arrow 0.6s infinite 0s alternate; left:110%; bottom:110%;}
 
-article{height:100vh;}
-.home{position: relative;background: transparent; height:100vh;}
-.home h1{position: absolute; top:50%; left:50%; transform: translate(-50%,-50%);}
-.container{background:#f0f0f0;}
+.container{position: relative; background: #fff;}
+#about{padding:70px 0; z-index: 12;}
+#about .row{border:1px solid #e0e0e0; background: #fff;position: relative; overflow: hidden; z-index: 12; padding:35px;}
+#about .photo{float: left; width:20%}
+#about .text{float: right; width:80%;}
+#about .text ul{overflow: hidden; padding-top:15px;}
+#about .text ul li{width:50%; float:left; padding:5px 0;}
+#about .text ul li strong{font-weight: bold; color:#000; padding-right:15px;}
 
-.lines{position: fixed; width:100%; height:100vh; top:0;}
-.lines .row{margin:0 auto; width:1500px; height:100%;}
+#skill{position: relative;}
+#skill .row{background:#fff; position: relative; border:1px solid #e0e0e0; z-index: 12;}
+
+.lines{position: fixed; width:100%; height:100vh; top:0; z-index: 11; pointer-events: none;}
+.lines .row{margin:0 auto; width:1500px; height:100%;  padding-right:1px;}
 .lines .row .line-col{width:20%; height:100%; position: relative; float:left}
-.lines .row .line-col::after{content:''; background:#f0f0f0; left:0; top:0; position: absolute; width:100%; animation: gotop 0.4s both 0s ease-in;}
-.lines .row .line-col:before{content:''; background:#ccc; width:1px; height:100%; left:0; top:0; position: absolute;}
+.lines .row .line-col::after{content:''; background:#eee; left:0; top:0; position: absolute; width:100%; animation: gotop 0.3s both 0.2s ease-in;}
+.lines .row .line-col:before{content:''; background:#e0e0e0; width:1px; left:0; top:0; position: absolute; animation: gobottom 0.3s both 2.2s ease-in; height:100%}
 .lines .row .line-col:first-child::before{background: 0;}
-.lines .row .line-col:nth-child(1)::after{animation-delay: 1s; width:1000%; right:0; left:auto;}
-.lines .row .line-col:nth-child(2)::after{animation-delay: 0.4s; top:auto; bottom:0}
-.lines .row .line-col:nth-child(4)::after{animation-delay: 0.8s; top:auto; bottom:0}
-.lines .row .line-col:nth-child(5)::after{animation-delay: 1s; width:1000%; right:auto; left:0;}
+.lines .row .line-col:nth-child(1)::after{animation-delay: 1.2s; width:1000%; right:0; left:auto;}
+.lines .row .line-col:nth-child(2)::after{animation-delay: 0.7s; top:auto; bottom:0}
+.lines .row .line-col:nth-child(4)::after{animation-delay: 0.9s; top:auto; bottom:0}
+.lines .row .line-col:nth-child(5)::after{animation-delay: 1.2s; width:1000%; right:auto; left:0;}
+.lines .row .line-col:nth-child(2)::before{animation-delay:2.6s}
+.lines .row .line-col:nth-child(4)::before{animation-delay:2.0s}
+.lines .row .line-col:nth-child(5)::before{animation-delay:2.4s}
+.ready{z-index: 9;}
 
-#footer{position: fixed; bottom:0; width:100%;}
+#footer{position: fixed; bottom:3%; left:3%; width:100%;}
+#footer p{font-weight: bold; line-height: 1.5;}
 
 @keyframes gotop{
     0%{height:100%}
     100%{height:0%}
+}
+@keyframes gobottom{
+    0%{transform: translate(0 ,-100%);}
+    100%{transform: translate(0 ,0);}
+}
+
+@keyframes arrow{
+    0%{transform: translate(0 ,-50%);}
+    100%{transform: translate(0 ,0);}
 }
