@@ -5,33 +5,40 @@
 body{ color:#111; }
 p{font-size: 16px; line-height: 1.5; color:#666}
 h2{font-size: 24px; font-weight: 900;}
+
 #wrap{position: relative; background: #f4f4f4;}
 #header{position: fixed; top:0; width:100%; z-index: 99;}
 #header #hd{position: relative; padding:0 10px; margin-top:50px}
 #header h1{display:inline-block; padding-left:40px;}
 #header h1 a{font-size: 20px; font-weight: bolder;}
-#header h1 span{color:#666; transition: ease-in 0.3s;}
-#header h1 span:hover{color:#0071e3}
+#header h1 span{color:#0071e3; transition: ease-in 0.3s;}
+#header h1 span:hover{color:#666}
 #nav{position: absolute; top:0; right:2%;}
 #nav .depth1 li{float:left; font-size: 16px; font-weight: bold; padding:0 30px;transition: ease-in 0.3s;}
 #nav .depth1 li:hover{color:#0071e3}
+
+.container{position: relative; background: #fff;}
+article{padding-bottom:70px}
 .row{margin:0 auto; width:900px;}
 .title{padding-bottom:30px}
 .home{position: relative;height:100vh; z-index: 12;}
-.home h1{position: absolute; top:45%; transform: translate(-50%,-50%); left:50%; font-size: 140px; font-weight: bolder; display: inline-block; }
+.home h1{position: absolute; top:45%; transform: translate(-50%,-50%); left:50%; font-size: 80px; font-weight: bolder; display: inline-block; }
+.home h1::after{text-shadow: -1px 0 #0071e3; content: 'Resume'; position: absolute; top:0; left:2px; animation: glitch-2 2s infinite linear alternate-reverse; clip: rect(0,0,0,0);  background: #f4f4f4; }
+.home h1::before{text-shadow: -1px 0 #0071e3; content: 'Resume'; position: absolute; top:0; left:-2px; animation: glitch-2 2s infinite linear alternate-reverse; clip: rect(0,0,0,0); background: #f4f4f4; }
 .home .intro{position: absolute; bottom:3%;  transform: translate(-50%,-50%); left:50%; font-weight: bold;}
 .home .intro p{display: inline-block; padding-left:30px}
 .home .intro i{position:absolute; font-size: 30px; animation: arrow 0.6s infinite 0s alternate; left:110%; bottom:110%; color: #0071e3;}
 .home .intro span{color:#111}
 
-.container{position: relative; background: #fff;}
-article{padding-top:70px}
+#about{padding-top:70px;}
 #about .row{border:1px solid #e0e0e0; background: #fff;position: relative; overflow: hidden; z-index: 12; padding:35px;}
 #about .photo{float: left; width:20%}
 #about .text{float: right; width:80%;}
-#about .text ul{overflow: hidden; padding-top:15px;}
+#about .text ul{overflow: hidden; padding:15px 0 30px;}
 #about .text ul li{width:50%; float:left; padding:5px 0;}
 #about .text ul li strong{font-weight: bold; color:#0071e3; padding-right:15px;}
+#about .text > a {display: inline-block; padding: 10px 30px; border: 2px solid #0071e3; color: #0071e3; font-weight: 600; transition: 0.4s ease-out;}
+#about .text > a:hover{background: #0071e3; color:#fff}
 
 #skill{position: relative;}
 #skill .row{background:#fff; position: relative; border:1px solid #e0e0e0; z-index: 12; padding:35px;}
@@ -54,13 +61,16 @@ article{padding-top:70px}
 #works .contents li{float:left; width:45%; padding-bottom:5%; text-align: center; position: relative;}
 
 #works .contents li:nth-child(2n){margin-left:10%;}
-#works .contents li img{width:100%}
-#works .contents li h2{padding:20px 0 5px;}
-#works .contents li a{position: relative; display: block;}
+#works .contents li img{width:100%; transition: 0.4s ease-out;}
+#works .contents li h2{padding:20px 0 5px; transition: 0.4s ease-out;}
+#works .contents li a{position: relative; display: block; overflow: hidden; transition: 0.4s ease-out;}
 #works .contents li a::after{background: #0071e3; top:0; left:0; right:0; bottom:0; content: ''; display: block; position: absolute; opacity: 0; transition: 0.4s ease-out;}
 #works .contents li a i{position: absolute; top:50%; left:50%; opacity: 0; color:#fff; font-size:18px; transform:translate(-50%, -50%); transition: 0.4s ease-out;}
 #works .contents li a:hover::after{opacity: 0.8;}
 #works .contents li a:hover i{opacity: 1; z-index: 99;}
+#works .contents li a:hover img{transform: scale(1.2);}
+#works .contents li:hover h2 {color:#0071e3}
+#works .contents li:hover p {color:#0071e3}
 
 .lines{position: fixed; width:100%; height:100vh; top:0; z-index: 11; pointer-events: none;}
 .lines .row{margin:0 auto; width:1500px; height:100%;  padding-right:1px;}
@@ -113,3 +123,157 @@ article{padding-top:70px}
     0% {width: 0%; opacity:0}
     100% {width: 70%; opacity: 1;}
 }
+
+
+@keyframes glitch-1 {
+	0% {
+		clip: rect(20px, 920px, 51px, 0);
+	}
+
+	5% {
+		clip: rect(83px, 920px, 102px, 0);
+	}
+
+	10% {
+		clip: rect(83px, 920px, 105px, 0);
+	}
+
+	15% {
+		clip: rect(95px, 920px, 11px, 0);
+	}
+
+	20% {
+		clip: rect(105px, 920px, 56px, 0);
+	}
+
+	25% {
+		clip: rect(40px, 920px, 19px, 0);
+	}
+
+	30% {
+		clip: rect(56px, 920px, 97px, 0);
+	}
+
+	35% {
+		clip: rect(9px, 920px, 17px, 0);
+	}
+
+	40% {
+		clip: rect(103px, 920px, 53px, 0);
+	}
+
+	45% {
+		clip: rect(92px, 920px, 6px, 0);
+	}
+
+	50% {
+		clip: rect(69px, 920px, 46px, 0);
+	}
+
+	55% {
+		clip: rect(8px, 920px, 87px, 0);
+	}
+
+	60% {
+		clip: rect(12px, 920px, 15px, 0);
+	}
+
+	70% {
+		clip: rect(28px, 920px, 106px, 0);
+	}
+
+	80% {
+		clip: rect(98px, 920px, 63px, 0);
+	}
+
+	85% {
+		clip: rect(11px, 920px, 44px, 0);
+	}
+
+	95% {
+		clip: rect(23px, 920px, 84px, 0);
+	}
+
+	100% {
+		clip: rect(66px, 920px, 91px, 0);
+	}
+
+}
+
+@keyframes glitch-2 {
+	0% {
+		clip: rect(86px, 920px, 25px, 0);
+	}
+
+	5% {
+		clip: rect(30px, 920px, 17px, 0);
+	}
+
+	10% {
+		clip: rect(54px, 920px, 43px, 0);
+	}
+
+	15% {
+		clip: rect(10px, 920px, 86px, 0);
+	}
+
+	25% {
+		clip: rect(62px, 920px, 1px, 0);
+	}
+
+	30% {
+		clip: rect(61px, 920px, 24px, 0);
+	}
+
+	35% {
+		clip: rect(38px, 920px, 46px, 0);
+	}
+
+	40% {
+		clip: rect(115px, 920px, 8px, 0);
+	}
+
+	45% {
+		clip: rect(87px, 920px, 44px, 0);
+	}
+
+	50% {
+		clip: rect(6px, 920px, 65px, 0);
+	}
+
+	55% {
+		clip: rect(83px, 920px, 99px, 0);
+	}
+
+	65% {
+		clip: rect(25px, 920px, 71px, 0);
+	}
+
+	70% {
+		clip: rect(37px, 920px, 55px, 0);
+	}
+
+	75% {
+		clip: rect(115px, 920px, 18px, 0);
+	}
+
+	80% {
+		clip: rect(68px, 920px, 46px, 0);
+	}
+
+	90% {
+		clip: rect(47px, 920px, 31px, 0);
+	}
+
+	95% {
+		clip: rect(47px, 920px, 84px, 0);
+	}
+
+	100% {
+		clip: rect(93px, 920px, 53px, 0);
+	}
+
+}
+
+
+
