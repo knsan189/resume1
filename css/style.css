@@ -5,6 +5,7 @@
 body{ color:#111; }
 p{font-size: 16px; line-height: 1.5; color:#666}
 h2{font-size: 24px; font-weight: 900;}
+h3{font-weight: 900; font-size: 16px;}
 
 #wrap{position: relative; background: #f4f4f4;}
 #header{position: fixed; top:0; width:100%; z-index: 99;}
@@ -18,7 +19,7 @@ h2{font-size: 24px; font-weight: 900;}
 #nav .depth1 li:hover{color:#0071e3}
 
 .container{position: relative; background: #fff;}
-article{padding-bottom:70px}
+article{padding:70px 0 }
 .row{margin:0 auto; width:900px;}
 .title{padding-bottom:30px}
 .home{position: relative;height:100vh; z-index: 12;}
@@ -39,6 +40,18 @@ article{padding-bottom:70px}
 #about .text ul li strong{font-weight: bold; color:#0071e3; padding-right:15px;}
 #about .text > a {display: inline-block; padding: 10px 30px; border: 2px solid #0071e3; color: #0071e3; font-weight: 600; transition: 0.4s ease-out;}
 #about .text > a:hover{background: #0071e3; color:#fff}
+
+#experience ul{overflow: hidden;}
+#experience ul li{float:left; width:45%;}
+#experience ul li:first-child{margin-right:10%}
+#experience ul li h2{padding-left:35px; z-index: 13; position: relative;}
+#experience .txtbox{border:1px solid #e0e0e0; background: #fff; z-index: 12; padding:35px; position: relative; margin-bottom:70px;}
+#experience .txtbox:last-child{margin:0;}
+#experience .txtbox img{height:25px; display: block; margin:20px 0;}
+#experience .txtbox span{color:#0071e3; font-weight: bold; font-size:14px;}
+#experience .txtbox p{padding-top:20px;}
+#experience li:nth-child(2) h3{padding-top:20px}
+
 
 #skill{position: relative;}
 #skill .row{background:#fff; position: relative; border:1px solid #e0e0e0; z-index: 12; padding:35px;}
@@ -89,8 +102,10 @@ article{padding-bottom:70px}
 
 #footer .num{position: fixed; bottom: 4%; left:3%; }
 #footer p{font-weight: 500; line-height: 1.5; font-size: 14px;}
-#footer .sns{position: fixed; bottom: 4%; right:3%; text-align: center;}
-#footer .sns i{font-size: 20px; display: block; padding:20px 0;}
+#footer .sns{position: fixed; bottom: 4%; right:3%; text-align: center; z-index: 99;}
+#footer .sns i{font-size: 20px; display: block; padding:20px 0; transition: 0.4s all; }
+#footer .sns a:hover i{font-size: 24px;color:#0071e3}
+#footer .sns span{text-indent: -9999; overflow: hidden; font-size:0;}
 
 @keyframes gotop{
     0%{height:100%}
