@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+@media (max-width: 1199px){
+    .row{width:100%;}
+    #header{height:100vh;}
+    #nav{width:100%; display: none;}
+    #nav .depth1 li{display: block; float:none; width:100%; text-align: center; margin:10px 0;}
+
+    .lines .row .line-col{width:33%}
+    .lines .row .line-col:nth-child(4){display: none;}
+    .lines .row .line-col:nth-child(5){display: none;}
+
+    .home .intro i{top:0%; bottom:auto;}
+    #footer{display: none;}
+}
+
+@media(min-width: 1200px){
+    .row{max-width:100%;}
+}

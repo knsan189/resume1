@@ -14,11 +14,13 @@ h3{font-weight: 900; font-size: 16px;}
 #header h1 a{font-size: 20px; font-weight: bolder;}
 #header h1 span{color:#0071e3; transition: ease-in 0.3s;}
 #header h1 span:hover{color:#666}
+#header .menu_btn{font-size: 28px; right:5%; position: absolute;}
+#header .menu_on{display: block;}
 #nav{position: absolute; top:0; right:2%;}
 #nav .depth1 li{float:left; font-size: 16px; font-weight: bold; padding:0 30px;transition: ease-in 0.3s;}
 #nav .depth1 li:hover{color:#0071e3}
 
-.container{position: relative; background: #fff;}
+#container{position: relative; background: #fff;}
 article{padding:70px 0 }
 .row{margin:0 auto; width:900px;}
 .title{padding-bottom:30px}
@@ -30,6 +32,7 @@ article{padding:70px 0 }
 .home .intro p{display: inline-block; padding-left:30px}
 .home .intro i{position:absolute; font-size: 30px; animation: arrow 0.6s infinite 0s alternate; left:110%; bottom:110%; color: #0071e3;}
 .home .intro span{color:#111}
+.home .intro_txt{width:100%; position: relative;}
 
 #about{padding-top:70px;}
 #about .row{border:1px solid #e0e0e0; background: #fff;position: relative; overflow: hidden; z-index: 12; padding:35px;}
@@ -108,7 +111,7 @@ article{padding:70px 0 }
 #contact .formbox legend{font-size:0; text-indent: -9999px; overflow: hidden; line-height: 0; height:0;visibility: hidden; position: absolute;}
 
 .lines{position: fixed; width:100%; height:100vh; top:0; z-index: 11; pointer-events: none;}
-.lines .row{margin:0 auto; width:1500px; height:100%;  padding-right:1px;}
+.lines .row{position: absolute; left:50%; transform: translate(-50%); width:1500px; height:100%;  padding-right:1px; max-width:100%;}
 .lines .row .line-col{width:20%; height:100%; position: relative; float:left}
 .lines .row .line-col::after{content:''; background:#eee; left:0; top:0; position: absolute; width:100%; animation: gotop 0.3s both 0.2s ease-in;}
 .lines .row .line-col:before{content:''; background:#e0e0e0; width:1px; left:0; top:0; position: absolute; animation: gobottom 0.3s both 2.2s ease-in; height:100%}
@@ -122,7 +125,7 @@ article{padding:70px 0 }
 .lines .row .line-col:nth-child(5)::before{animation-delay:2.4s}
 .ready{z-index: 9999;}
 
-#footer .num{position: fixed; bottom: 4%; left:3%; }
+#footer .num{position: fixed; bottom: 4%; left:3%; z-index: 99;}
 #footer p{font-weight: 500; line-height: 1.5; font-size: 14px;}
 #footer .sns{position: fixed; bottom: 4%; right:3%; text-align: center; z-index: 99;}
 #footer .sns i{font-size: 20px; display: block; padding:20px 0; transition: 0.4s all; }
