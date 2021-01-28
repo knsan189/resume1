@@ -30,15 +30,19 @@
                         <li><a href="#works">WORKS</a></li>
                         <li><a href="#contact">CONTACT</a></li>
                     </ul>
+                    <button class="menu_close"><i class="fas fa-times"></i></button>
                 </nav>
                 <button class="menu_btn"><i class="fas fa-bars"></i></button>
-                <button class="menu_close"><i class="fas fa-times"></i></button>
+                
                 <script>
                     $(function () {
                         $('.menu_btn').click(function () {
                            $('#nav').addClass('menu_on');
                         })
                         $('.menu_close').click(function () {
+                           $('#nav').removeClass('menu_on');
+                        });
+                        $('.depth1>li').click(function () {
                            $('#nav').removeClass('menu_on');
                         });
                     });
