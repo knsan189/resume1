@@ -8,10 +8,10 @@ h2{font-size: 24px; font-weight: 900;}
 h3{font-weight: 900; font-size: 16px;}
 
 #wrap{position: relative; background: #f4f4f4;}
-#header{position: fixed; top:0; width:100%; z-index: 99; transition: 0.3s linear;}
+#header{position: fixed; top:0; width:100%; z-index: 99; transition: 0.5s linear;}
 #header.fixed{background: #fff; padding:20px 0; box-shadow: #e0e0e0 0 1px;}
-#header.fixed #hd{padding-top:10px}
-#header #hd{position: relative; padding:0 10px; padding-top:50px; transition: 0.3s linear;}
+#header.fixed #hd{padding-top:0px}
+#header #hd{position: relative; padding:0 10px; padding-top:50px; transition: 0.5s linear;}
 #header h1{display:inline-block; padding-left:40px; position: relative ; z-index: 999;}
 #header h1 a{font-size: 20px; font-weight: bolder;}
 #header h1 span{color:#0071e3; transition: ease-in 0.3s;}
