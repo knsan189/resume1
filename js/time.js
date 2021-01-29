@@ -1,3 +1,17 @@
+
+$(function () {
+    $('.menu_btn').click(function () {
+       $('#nav').addClass('menu_on');
+    })
+    $('.menu_close').click(function () {
+       $('#nav').removeClass('menu_on');
+    });
+    $('.depth1>li').click(function () {
+       $('#nav').removeClass('menu_on');
+    });
+});
+
+
 (function($){
     $.fn.extend({ 
 

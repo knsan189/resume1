@@ -20,7 +20,7 @@
             <a href="#container">본문 바로가기</a>
         </div>
         <header id="header">
-            <div id="hd">      
+            <div id="hd">
                 <h1><a href="">Jin <span>Haneul</span></a></h1>
                 <nav id="nav">
                     <ul class="depth1 cf">
@@ -32,23 +32,23 @@
                     <button class="menu_close"><i class="fas fa-times"></i></button>
                 </nav>
                 <button class="menu_btn"><i class="fas fa-bars"></i></button>
-                
-                <script>
-                    $(function () {
-                        $('.menu_btn').click(function () {
-                           $('#nav').addClass('menu_on');
-                        })
-                        $('.menu_close').click(function () {
-                           $('#nav').removeClass('menu_on');
-                        });
-                        $('.depth1>li').click(function () {
-                           $('#nav').removeClass('menu_on');
-                        });
-                    });
-                </script>
+
+
             </div>
         </header>
-
+        <script>
+            $(window).scroll(function () {
+                var scroll = $(window).scrollTop();
+                //console.log(scroll);
+                if (scroll >= 20) {
+                    //console.log('a');
+                    $("#header").addClass("fixed");
+                } else {
+                    //console.log('a');
+                    $("#header").removeClass("fixed");
+                }
+            });
+        </script>
         <section class="home">
             <h1>Resume</h1>
             <div class="intro">
