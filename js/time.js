@@ -1,4 +1,16 @@
 $(function () {
+    $(".lines").addTemporaryClass("ready", 1000);
+});
+
+$(function(){
+    $('.depth1>li').on('click', function(){
+        $(this)
+        .addClass('active')
+        .siblings().removeClass('active')
+    })
+});
+
+$(function () {
     $(window).scroll(function () {
         var scroll = $(window).scrollTop();
         //console.log(scroll);
