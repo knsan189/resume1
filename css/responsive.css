@@ -22,7 +22,7 @@
 }
 
 @media(min-width: 1200px){
-    .row{max-width:100%;}
+    .row{max-width:100%; padding:20px 0;}
     #header .menu_close{display: none;}
 }
 
@@ -42,5 +42,3 @@
     
 
 }
-
-pointer-events: none;
