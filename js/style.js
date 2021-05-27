@@ -41,6 +41,8 @@ $(function () {
 
     })
 
+
+
     var liTag
     $('.depth1 > li').on('click', function (e) {
         e.preventDefault()
@@ -57,5 +59,28 @@ $(function () {
             scrollTop: article
         }, 500)
     }
+
+
+    
+})
+
+
+window.addEventListener('DOMContentLoaded', function() {
+    const nav = document.getElementById('nav')
+    const menuOpen = document.querySelector('.menu_btn')
+    const menuClose = document.querySelector('.menu_close')
+    const depth1Lis = document.querySelectorAll('.depth1 > li')
+
+    menuOpen.addEventListener('click', function () {
+        nav.classList.add('on')
+    })
+
+    menuClose.addEventListener('click', function () {
+        nav.classList.remove('on')
+    })
+
+    depth1Lis.forEach(Li => Li.addEventListener('click', function(){
+        nav.classList.remove('on')
+    }))
 
 })

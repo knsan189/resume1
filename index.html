@@ -14,30 +14,10 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <script type="text/javascript">
         (function () {
-            // https://dashboard.emailjs.com/admin/integration
             emailjs.init('user_ujHAWx0p6UOFIpX1MMFfr');
         })();
     </script>
-    <script type="text/javascript">
-        window.onload = function () {
-            document.getElementById('contact-form').addEventListener('submit', function (event) {
-                event.preventDefault();
-                // generate a five digit number for the contact_number variable
-                // this.contact_number.value = Math.random() * 100000 | 0;
-                // these IDs from the previous steps
-                emailjs.sendForm('service_vsj7vag', 'template_q5jztpj', this)
-                    .then(
-                        function () {
-                            console.log('SUCCESS!');
-                            location.href = '/resume1'
-                            alert('이메일이 전송되었습니다.')
-                        },
-                        function (error) {
-                            console.log('FAILED...', error);
-                        });
-            });
-        }
-    </script>
+    <script type="text/javascript" src="./js/email.js"></script>
 
 
 </head>
@@ -84,7 +64,7 @@
             <article id="about">
                 <div class="row">
                     <div class="photo">
-                        <img src="img/blank_profile.png" alt="">
+                        <img src="img/photo.jpg" alt="사진">
                     </div>
                     <div class="text">
                         <p>안녕하세요 프론트앤드 개발자를 꿈꾸는 진하늘입니다. 정교하고 짜임새 있게 개발하기 위해 꾸준히 노력하고, 항상 같은 방식으로 코딩하는것이 아닌 매번 새로운 시도를
@@ -120,21 +100,21 @@
                             <h2 class="title">Experience</h2>
                             <div class="txtbox">
                                 <span>2019.09 ~ 2020. 12</span>
-                                <img src="img/candleikea_logo1.png" alt="">
+                                <img src="img/candleikea_logo1.png" alt="로고">
                                 <h3> Web Publisher - Candleikea </h3>
                                 <p> 새로운 임대몰 개설과 기존 임대몰 리뉴얼 작업, <br>추가적인 홈페이지 개설 (카페24, 퍼스트몰)</p>
                             </div>
 
                             <div class="txtbox">
                                 <span>2016.04 ~ 2019. 08 </span>
-                                <img src="img/educo_logo.png" alt="">
+                                <img src="img/educo_logo.png" alt="로고">
                                 <h3> Web Designer - 동화세상에듀코 </h3>
                                 <p> 홍보물 및 홈페이지 상세페이지 디자인<br> 그누보드 활용한 간단한 홈페이지 개설</p>
                             </div>
 
                             <div class="txtbox">
                                 <span>2015.09 ~ 2016. 04 </span>
-                                <img src="img/vera_logo.png" alt="">
+                                <img src="img/vera_logo.png" alt="로고">
                                 <h3> Web Designer - 베라커피 </h3>
                                 <p> 홍보물 및 홈페이지 상세페이지 디자인<br> 전반적인 쇼핑몰 관리</p>
                             </div>

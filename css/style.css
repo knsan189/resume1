@@ -67,11 +67,11 @@ article{padding:70px 0 }
 #skill .row{background:#fff; position: relative; border:1px solid #e0e0e0; z-index: 12; padding:35px;}
 #skill .row > div{padding:15px 0; font-weight: bold; }
 #skill .row > div > p{ color:#111}
-#skill .row > ul > li{padding-bottom:4%;}
+#skill .row > ul > li{padding-bottom:5%;}
 #skill .row > ul > li:last-child{padding:0}
 #skill .row > ul > li > h3{padding-bottom:2%;}
 #skill .list{ display: flex; align-items:flex-end; text-align: center;}
-#skill .list li{padding-right:3%}
+#skill .list li{padding-right:5%; padding-bottom:5%;}
 #skill .list li > img{height: 70px; padding-bottom:10px;}
 #skill .list li > p{font-size: 16px;}
 
